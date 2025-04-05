@@ -1,10 +1,8 @@
-import Navbar from '@/components/common/Navbar';
 import PricingPage from '@/components/pricing/PricingPage';
 
-export default function Home() {
+export default function Pricing() {
   return (
     <div>
-      <Navbar />
       <PricingPage />
     </div>
   );
