@@ -1,13 +1,12 @@
-import Navbar from '../components/common/Navbar';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function CompleteSignup() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, getValues } = useForm();
 
   const onSubmit = (data) => {
-    // Handle form submission
     console.log(data);
+    // Handle form submission (frontend only)
   };
 
   return (

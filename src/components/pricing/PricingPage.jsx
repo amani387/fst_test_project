@@ -1,7 +1,8 @@
+"use client"
 import { useState } from 'react';
 
 export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = useState('monthly');
+  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">

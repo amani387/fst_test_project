@@ -1,19 +1,12 @@
 import { useState } from 'react';
-import { useSession, signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 
 export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const [forgotPassword, setForgotPassword] = useState(false);
-  const { data: session } = useSession();
 
-  const onSubmit = async (data) => {
-    // Handle login
-    await signIn('credentials', {
-      redirect: false,
-      email: data.email,
-      password: data.password,
-    });
+  const onSubmit = (data) => {
+    console.log(data);
+    // Handle form submission (frontend only)
   };
 
   return (
