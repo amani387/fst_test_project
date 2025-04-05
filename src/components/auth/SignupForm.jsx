@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react';
 import { useSession, signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';

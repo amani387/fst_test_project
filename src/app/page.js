@@ -1,11 +1,9 @@
-import Navbar from '@/components/common/Navbar';
-import PricingPage from '@/components/pricing/PricingPage';
+import LoginForm from '@/components/auth/LoginForm';
 
-export default function Home() {
+export default function Login() {
   return (
     <div>
-      <Navbar />
-      <PricingPage />
+      <LoginForm />
     </div>
   );
 }
