@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link href="/aboutPage" className="hover:text-gray-300">
               About Us
             </Link>
-            <Link href="/contact" className="hover:text-gray-300">
+            <Link href="/contactUs" className="hover:text-gray-300">
               Contact Us
             </Link>
           </div>
