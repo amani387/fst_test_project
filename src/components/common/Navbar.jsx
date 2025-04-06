@@ -85,7 +85,7 @@ export default function Navbar() {
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/contactUs"
               className="block w-full text-center py-2 hover:bg-gray-100"
             >
               Contact Us

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-
+import Link from 'next/link';
 export default function PricingPage() {
   const [billingPeriod, setBillingPeriod] = useState('monthly');
 
@@ -58,9 +58,11 @@ export default function PricingPage() {
                     <li key={i}>{item}</li>
                   ))}
               </ul>
-              <button className="w-full bg-[#1D3653] hover:bg-blue-700 py-2 rounded-3xl text-white font-medium">
-                Choose Plan
-              </button>
+              <Link href="/order-summary">
+                <button className="w-full bg-[#1D3653] hover:bg-blue-700 py-2 rounded-3xl text-white font-medium">
+                  Choose Plan
+                </button>
+              </Link>
             </div>
 
             {/* Premium Plan */}
@@ -78,9 +80,11 @@ export default function PricingPage() {
                     <li key={i}>{item}</li>
                   ))}
               </ul>
-              <button className="w-full bg-yellow-500 hover:bg-yellow-600  py-2 rounded-3xl text-white font-medium">
-                Choose Plan
-              </button>
+              <Link href="/order-summary">
+                <button className="w-full bg-yellow-500 hover:bg-yellow-600 py-2 rounded-3xl text-white font-bold">
+                  Choose Plan
+                </button>
+              </Link>
             </div>
 
             {/* Enterprise Plan */}
@@ -98,9 +102,11 @@ export default function PricingPage() {
                     <li key={i}>{item}</li>
                   ))}
               </ul>
-              <button className="w-full bg-[#1D3653] hover:bg-blue-700 py-2 rounded-3xl text-white font-medium">
-                Contact Us
-              </button>
+              <Link href="/contactUs">
+                <button className="w-full bg-[#1D3653] hover:bg-blue-700 py-2 rounded-3xl text-white font-medium">
+            Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>
