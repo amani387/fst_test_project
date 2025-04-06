@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen w-full bg-[url('/images/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
           <Navbar />
           <main>{children}</main>
+          
         </div>
       </body>
     </html>
