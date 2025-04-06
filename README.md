@@ -2,7 +2,7 @@
 
 ![Teamify Logo](/public/images/logo.png)
 
-Teamify is a modern, responsive virtual office solution built with Next.js. Our platform is designed to help businesses operate efficiently in the digital age, with a focus on responsiveness and usability across all devices.
+Teamify is a modern, responsive virtual office solution built with Next.js. with a focus on responsiveness and usability across all devices.
 
 ## Key Features
 
