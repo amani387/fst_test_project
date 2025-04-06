@@ -31,5 +31,5 @@ Teamify is a modern, responsive virtual office solution built with Next.js. with
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/teamify.git
+   git clone (https://github.com/amani387/fst_test_project.git)
    cd teamify
