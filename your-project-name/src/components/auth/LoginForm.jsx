@@ -67,6 +67,14 @@ export default function LoginForm() {
                 By proceeding you are agreeing to the Terms & Conditions and Privacy Policy
               </div>
             </form>
+            <div className="mt-8 text-center">
+              <p className="text-black">
+                dont have an account?{' '}
+                <a href="/signup" className="text-yellow-500 hover:text-yellow-600">
+                  Register
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
