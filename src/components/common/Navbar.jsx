@@ -79,7 +79,7 @@ export default function Navbar() {
               Pricing
             </Link>
             <Link
-              href="/about"
+              href="/aboutPage"
               className="block w-full text-center py-2 hover:bg-gray-700"
             >
               About Us
