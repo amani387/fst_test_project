@@ -13,11 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-         {/* ✅ Google Analytics scripts */}
-         <Script
+        <head>
+        {/* ✅ Google Analytics script loader */}
+        <Script
           strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-T2FQ2560XT" // Replace with real ID
+          src="https://www.googletagmanager.com/gtag/js?id=G-T2FQ2560XT"
         />
         <Script
           id="google-analytics"
@@ -27,10 +27,15 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-T2FQ2560XT'); // Replace with real ID
+              gtag('config', 'G-T2FQ2560XT', {
+                page_path: window.location.pathname,
+              });
             `,
           }}
         />
+      </head>
+      <body className={`${inter.className}`}>
+         
 
         {/* Background container */}
         <div className="min-h-screen w-full bg-[url('/images/background.png')] bg-cover bg-center bg-fixed bg-no-repeat">
