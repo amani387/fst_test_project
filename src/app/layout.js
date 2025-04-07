@@ -13,27 +13,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <head>
-        {/* ✅ Google Analytics script loader */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-T2FQ2560XT"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-T2FQ2560XT', {
-                page_path: window.location.pathname,
-              });
-            `,
-          }}
-        />
-      </head>
+      
+      {/* ✅ Google Analytics scripts RIGHT after <html>, before <body> */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-T2FQ2560XT"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T2FQ2560XT');
+          `,
+        }}
+      />
+
       <body className={`${inter.className}`}>
          
 
