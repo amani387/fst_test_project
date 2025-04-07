@@ -1,16 +1,34 @@
 "use client";
 import { useState } from 'react';
-
+import Script from "next/script"; // Ensure this is imported
 export default function OrderSummary() {
   const [billingPeriod, setBillingPeriod] = useState('monthly');
 
   return (
+   
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: `url('/images/background.png')`, // Replace with your actual image path
       }}
     >
+         {/* ✅ Google Analytics scripts */}
+         <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-T2FQ2560XT"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T2FQ2560XT');
+          `,
+        }}
+      />
       <div className="backdrop-blur-sm min-h-screen">
      
 
